@@ -1,0 +1,9 @@
+# Site settings
+title: tabsleeper
+email: 
+description: Chrome extension for lightweight tab management
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://tabsleeper.com" # the base hostname & protocol for your site
+
+# Build settings
+markdown: kramdown

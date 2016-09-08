@@ -1,0 +1,90 @@
+// Reset
+
+* {
+  box-sizing: border-box;
+
+  &:focus {
+    outline: 4px solid $c-ac;
+  }
+
+}
+
+body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, hr,
+dl, dd, ol, ul, figure {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+// Base
+
+body {
+  font: $f-weight #{$f-size}/#{$f-lheight} $f-sansserif;
+  color: $c-fg;
+  background-color: $c-bg;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-feature-settings: "kern" 1;
+  -moz-font-feature-settings: "kern" 1;
+  -o-font-feature-settings: "kern" 1;
+  font-feature-settings: "kern" 1;
+  font-kerning: normal;
+  text-rendering: optimizeLegibility;
+}
+
+
+// Vertical Rhythm
+
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+ul, ol, dl, figure,
+%vertical-rhythm {
+  margin-bottom: $spacer / 2;
+}
+
+// Images
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+// Figure
+
+figure > img {
+  display: block;
+}
+
+figcaption {
+  font-size: $f-size * 0.95;
+}
+
+// Clearfix
+
+%clearfix {
+
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+// Icons
+
+.icon {
+
+  > svg {
+    display: inline-block;
+    width: $f-size;
+    height: $f-size;
+    vertical-align: middle;
+    path {
+      fill: $c-fg;
+    }
+  }
+}

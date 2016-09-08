@@ -1,0 +1,45 @@
+---
+# tabsleeper
+---
+@charset "utf-8";
+
+// colours
+$c-bg: #85A2E4;
+$c-fg: #313131;
+$c-ac: #ab6b38;
+
+// fonts
+$f-sansserif: -apple-system, BlinkMacSystemFont, 
+  "Roboto", "Ubuntu", "Segoe UI", 
+  "Fira Sans", "Droid Sans", "Helvetica Neue", 
+  sans-serif;
+$f-serif: "Adobe Caslon Pro","Athelas",
+  "Goudy Old Style","Californian FB", Georgia,
+  serif;
+
+$f-size: 16px;
+$f-lheight: 1.5;
+$f-weight: 400;
+
+// units
+$spacer: 3rem;
+
+// breakpoints
+$bp-tablet:        768px;
+$bp-desktop:       1024px;
+$bp-desktopwide:   1440px;
+$bp-4k:            2560px;
+
+// mobile-first css; with media queries for tablet and desktop
+@mixin query($breakpoint) {
+  @media screen and (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import
+  'base',
+  'type',
+  'layout'
+;

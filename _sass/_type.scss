@@ -1,0 +1,55 @@
+// headings
+
+.h-main {
+  font-size: 3.5rem;
+  @include query($bp-tablet){
+    font-size: 5rem;
+  }
+  @include query($bp-desktop){
+    font-size: 7.5rem;
+  }
+  @include query($bp-4k){
+    font-size: 12rem;
+  }
+}
+
+.s-main {
+  font-size: 1.25rem;
+  font-weight: $f-weight;
+  @include query($bp-tablet){
+    font-size: 1.5rem;
+  }
+  @include query($bp-desktop){
+    font-size: 2rem;
+  }
+  @include query($bp-4k){
+    font-size: 3.2rem;
+  }
+}
+
+.l-main {
+  font-size: 1.25rem;
+}
+
+.c-main {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: bold;
+}
+
+// links
+
+a {
+  color: currentColor;
+  text-decoration: none;
+  background-color: transparent;
+  background-image: -webkit-linear-gradient(transparent -300%,currentColor 600%);
+  background-image: linear-gradient(transparent -300%,currentColor 600%);
+  text-decoration: none;
+  background-repeat: no-repeat;
+  background-size: 100% 1px;
+  background-position: 0 100%;
+  &:hover {
+    color: darken($c-fg, 50%)
+  }
+}
