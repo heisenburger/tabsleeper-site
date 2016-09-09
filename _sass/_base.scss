@@ -26,7 +26,9 @@ html, body {
 body {
   font: $f-weight #{$f-size}/#{$f-lheight} $f-sansserif;
   color: $c-fg;
-  background-color: $c-bg;
+  // background-color: $c-bg;
+  animation: colorchange 120s; 
+  animation-iteration-count:infinite;
   -webkit-text-size-adjust: 100%;
   -webkit-font-feature-settings: "kern" 1;
   -moz-font-feature-settings: "kern" 1;
@@ -34,6 +36,14 @@ body {
   font-feature-settings: "kern" 1;
   font-kerning: normal;
   text-rendering: optimizeLegibility;
+}
+
+// Background colour
+
+@keyframes colorchange {
+  0%   {background-color: #63b6ff;}
+  50%  {background-color: #ff6363;}
+  100% {background-color: #63b6ff;}
 }
 
 
@@ -86,5 +96,13 @@ figcaption {
     path {
       fill: $c-fg;
     }
+  }
+}
+
+// utilities
+
+@media screen and (max-width: $bp-tablet){
+  .hide-m {
+    display: none;
   }
 }
