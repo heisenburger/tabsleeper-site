@@ -36,7 +36,7 @@
 
 @mixin layout($width){
   width: 100vw;
-  padding: 0 1rem;
+  padding: 0 8vw;
   @include query($bp-tablet){
     max-width: $width;
     margin: 0 auto;
@@ -59,7 +59,7 @@
   width: 100vw;
   height: 100vh;
   text-align: center;
-  padding-top: 5vh;
+  padding-top: 10vh;
   @include query($bp-tablet){
     padding-top: 20vh;
   }
@@ -119,7 +119,7 @@ svg.h-main {
 
   h2 {
     font-size: 2rem;
-    padding-top: 2rem;
+    padding-top: 3rem;
     @include query($bp-tablet){
       font-size: 3.75rem;
       padding-top: 7rem;
@@ -128,9 +128,9 @@ svg.h-main {
 
   p:last-of-type {
     padding-bottom: 3rem;
+    margin-bottom: 0;
     @include query($bp-tablet){
       padding-bottom: 8rem;
-      margin-bottom: 0;
     }
   }
 
