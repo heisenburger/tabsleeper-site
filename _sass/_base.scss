@@ -9,7 +9,7 @@
 
 }
 
-body, h1, h2, h3, h4, h5, h6,
+html, body, h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, hr,
 dl, dd, ol, ul, figure {
   margin: 0;
@@ -44,6 +44,17 @@ body {
   0%   {background-color: #63b6ff;}
   50%  {background-color: #ff6363;}
   100% {background-color: #63b6ff;}
+}
+
+.c-bg {
+  animation: colorchange-foreground 120s; 
+  animation-iteration-count:infinite;
+}
+
+@keyframes colorchange-foreground {
+  0%   {color: #63b6ff;}
+  50%  {color: #ff6363;}
+  100% {color: #63b6ff;}
 }
 
 

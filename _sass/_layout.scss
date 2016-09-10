@@ -20,9 +20,42 @@
   }
 }
 
+// 960
+
+.wrap-light {
+  width: 100vw;
+  background-color: transparent;
+  color: $c-fg;
+}
+
+.wrap-dark {
+  width: 100vw;
+  background-color: $c-fg;
+  color: white;
+}
+
+@mixin layout($width){
+  width: 100vw;
+  padding: 0 1rem;
+  @include query($bp-tablet){
+    max-width: $width;
+    margin: 0 auto;
+    padding: 0;
+  }
+}
+
+.ninesixty {
+  @include layout(960px)
+}
+
+.sixtwenty {
+  @include layout(620px)
+}
+
 // main page
 
 .main {
+  position: relative;
   width: 100vw;
   height: 100vh;
   text-align: center;
@@ -78,6 +111,29 @@ svg.h-main {
     top: 1rem;
     right: 1rem;
   }
+}
+
+// description
+
+.desc {
+
+  h2 {
+    font-size: 2rem;
+    padding-top: 2rem;
+    @include query($bp-tablet){
+      font-size: 3.75rem;
+      padding-top: 7rem;
+    }
+  }
+
+  p:last-of-type {
+    padding-bottom: 3rem;
+    @include query($bp-tablet){
+      padding-bottom: 8rem;
+      margin-bottom: 0;
+    }
+  }
+
 }
 
 // drawing window with tabs
